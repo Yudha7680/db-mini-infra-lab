@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Backup Dashboard</title>
+    <style>
+      body {
+        font-family: Arial;
+        background: #111;
+        color: #eee;
+        padding: 20px;
+      }
+      .success {
+        color: #00ff7f;
+      }
+      .failed {
+        color: #ff5757;
+      }
+      h2 {
+        color: #00bfff;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>✅ MySQL Backup Dashboard</h2>
+    <table border="1" cellpadding="6">
+      <tr>
+        <th>Status</th>
+        {% if status == "success" %}
+        <span style="color: green">success</span>
+        {% else %}
+        <span style="color: red">failed</span>
+        {% endif %}
+
+        <th>Log</th>
+      </tr>
+      {% for log in logs %}
+      <tr>
+        <td class="{{log.status}}">{{log.status}}</td>
+        <td>{{log.text}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br />
+    <small>Auto backup monitoring • Powered by Flask</small>
+  </body>
+</html>

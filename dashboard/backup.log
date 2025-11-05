@@ -1,0 +1,1 @@
+20251104_172307 - FAILED - Command '['mysqldump', '-uroot', '-pyudha7680', '--all-databases', '--result-file=C:\\db-mini-infra-lab\\backups\\backup_20251104_172307.sql']' returned non-zero exit status 2.
