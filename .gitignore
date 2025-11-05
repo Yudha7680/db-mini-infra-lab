@@ -1,0 +1,17 @@
+# Ignore backup outputs
+backups/
+*.sql
+backup.log
+
+# Python cache
+__pycache__/
+
+# Virtual env
+venv/
+env/
+
+# Logs
+*.log
+
+# Zip or compressed files
+*.zip
